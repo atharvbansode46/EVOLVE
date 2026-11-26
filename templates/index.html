@@ -1,16 +1,87 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>EVOLVE | Your Growth Journey</title>
+
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
+
 <body>
 
-    <h1>Welcome to EVOLVE</h1>
-    <p>Your personal AI-powered skill development platform.</p>
+    <header>
+        <div class="logo">EVOLVE<span>.</span></div>
 
+        <nav>
+            <a href="#features">Features</a>
+            <a href="#about">About</a>
+            <a href="#start" class="nav-btn">Get Started</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero" id="start">
+
+            <p class="tagline">YOUR PERSONAL AI GROWTH PARTNER</p>
+
+            <h1>
+                Don't Just Learn.<br>
+                <span>Evolve Every Day.</span>
+            </h1>
+
+            <p class="hero-description">
+                Turn your goals into skills with personalized AI roadmaps,
+                practical challenges and intelligent guidance.
+            </p>
+
+            <a href="#features" class="primary-btn">
+                Explore EVOLVE →
+            </a>
+
+        </section>
+
+        <section class="features" id="features">
+
+            <h2>One Platform. Endless Growth.</h2>
+
+            <div class="feature-container">
+
+                <div class="feature-card">
+                    <h3>AI Roadmaps</h3>
+                    <p>Get a personalized learning path based on your goals.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>AI Tutor</h3>
+                    <p>Learn, practice and solve problems with your AI mentor.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Track Progress</h3>
+                    <p>Build consistency, earn XP and measure your growth.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="about" id="about">
+            <h2>Your Growth. Your Journey.</h2>
+            <p>
+                EVOLVE helps you transform your ambitions into
+                real-world skills and achievements.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 EVOLVE. Built for continuous growth.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 </html>
