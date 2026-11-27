@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | EVOLVE</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <div class="register-container">
+        <h1>Welcome Back</h1>
+        <p>Continue your growth journey with EVOLVE.</p>
+
+        {% if message %}
+            <div class="message">{{ message }}</div>
+        {% endif %}
+
+        <form action="/login" method="POST">
+            <input type="email" name="email" placeholder="Email Address" required>
+
+            <input type="password" name="password" placeholder="Password" required>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <p>Don't have an account? <a href="/register">Create Account</a></p>
+
+    </div>
+
+</body>
+</html>

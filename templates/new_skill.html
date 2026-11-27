@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Skill | EVOLVE</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <div class="register-container">
+
+        <h1>Start Something New.</h1>
+        <p>Tell EVOLVE what you want to master.</p>
+
+        <form action="/new-skill" method="POST">
+
+            <label>What skill do you want to learn?</label>
+            <input
+                type="text"
+                name="skill_name"
+                placeholder="Example: Python, Web Development, AI..."
+                required
+            >
+
+            <label>Current Skill Level</label>
+            <select name="current_level" required>
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+            </select>
+
+            <label>Target Skill Level</label>
+            <select name="target_level" required>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+                <option value="Expert">Expert</option>
+            </select>
+
+            <label>Target Deadline (Optional)</label>
+            <input type="date" name="deadline">
+
+            <label>Why do you want to learn this skill?</label>
+            <textarea
+                name="motivation"
+                placeholder="Tell us your goals and motivation..."
+                rows="4"
+            ></textarea>
+
+            <button type="submit">Create My Learning Journey</button>
+
+        </form>
+
+        <p><a href="/dashboard">Back to Dashboard</a></p>
+
+    </div>
+
+</body>
+</html>
